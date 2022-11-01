@@ -6,14 +6,13 @@ struct Person{  // struct with Person attributes
     int salary;
     char Gpa;
 };
-// The following function will read person1's name and salary
+// The following function will read persons name and salary
 // it will also calculate students Gpa based on marks
-void readIn(Person persons[3],int size){
+void readIn(Person persons[],int size){
     int marks[3];
     for(int i=0;i<size;i++) {
         cout << "Enter Person's name, salary and marks: ";
-        getline(cin, persons[i].name);
-        cin >> persons[i].salary >>marks[i];
+        cin >>persons[i].name>> persons[i].salary >>marks[i];
         if (marks[i] >= 87)
             persons[i].Gpa = 'A';
         if (marks[i] >= 80)
@@ -24,19 +23,21 @@ void readIn(Person persons[3],int size){
             persons[i].Gpa = 'F';
     }
 }
-// This function will print the person1's values
-void printPerson(Person persons[3],int size){
+// This function will print the persons values
+void printPerson(Person persons[],int size){
     for(int i=0;i<size;i++){
     cout<<"name is "<<persons[i].name<<endl;
     cout<<"salary is "<<persons[i].salary<<endl;
     cout<<"Gpa is "<<persons[i].Gpa<<endl;
+    cout<<"..........................\n";
     }
 }
 int main(){
 
-    Person persons[3];
+     // it will create three instances of persons in which we can store 3 different data sets
+    Person persons[3]; // person[0], person[1], person[2]
     int size=3;
-    // p1 argument is passed as a person1 parameter to the function readIn,PrintPerson
-    readIn(persons[3],size);
-    printPerson(persons[3],size);
+    // person arguments is passed as a person1 parameter to the function readIn,PrintPerson
+    readIn(persons,size);
+    printPerson(persons,size);
 }

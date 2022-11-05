@@ -4,7 +4,7 @@ using namespace std;
 void pattern1(){
     int n;
     cin>>n; // if n=4,  r=(1→4) 3, c=(1→7)
-    // * Formula: for(col>=(n-r-1) to col<=(n+r-1)) print "*"
+    // * Formula:  for(col>=(n-r-1) to col<=(n+r-1)) print "*"
     /*    r | n-3 n-2 n-1 n n+1 n+2 n+3
           1 |             *
           2 |          *  *  *
